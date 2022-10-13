@@ -8,7 +8,8 @@ reviewed_text = df.reviewText.apply(gensim.utils.simple_preprocess) #simple prep
 model = gensim.models.Word2Vec(
     window=10, #size of window around target word
     min_count= 2,# minimal number of words in a sentence needed for it to be considered a training data
-    workers= 4 # number of threads that will work (training is using CPU not GPU)
+    workers= 4, # number of threads that will work (training is using CPU not GPU)
+    sg=1
 )
 
 model.build_vocab(reviewed_text, progress_per=1000) #progress_per =1000 indicates after how many processed words the program will show progress
