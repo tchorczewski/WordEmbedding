@@ -15,7 +15,7 @@ model.build_vocab(reviewed_text, progress_per=1000) #progress_per =1000 indicate
 
 print(model.epochs) #default number of loops over the whole dataset
 
-model.train(reviewed_text, total_examples=model.corpus_count, epochs= 10) #training the model
+model.train(reviewed_text, total_examples=model.corpus_count, epochs= 10) #training the model Bag of words method
 
 #TESTING THE MODEL
 
